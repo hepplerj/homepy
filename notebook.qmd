@@ -1,0 +1,15 @@
+---
+title: "Data Extraction of Homestead Records"
+format:
+    html:
+        code-fold: true
+jupyter: python3
+---
+
+```{python}
+import fitz
+import pandas as pd
+doc = fitz.open("data_raw/Baker_Estella_FP_855811_20220313_0001.pdf")
+page1 = doc[0] # for testing
+words = page1.get_text("words")
+```
